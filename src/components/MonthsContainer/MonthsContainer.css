@@ -1,0 +1,4 @@
+.MonthsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
