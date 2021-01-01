@@ -1,0 +1,24 @@
+.YearSelect {
+  left: 2%;
+  top: 2%;
+  position: absolute;
+}
+
+.Select {
+  color: white;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Select {
+    animation: Select-move 2s alternate;
+  }
+}
+
+@keyframes Select-move {
+  from {
+    transform: translate(0, -200%);
+  }
+  to {
+    transform: translate(0, 0%);
+  }
+}

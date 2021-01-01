@@ -2,7 +2,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .YearLogo {
+  .image {
     animation: App-logo-spin 2s alternate;
   }
 }
