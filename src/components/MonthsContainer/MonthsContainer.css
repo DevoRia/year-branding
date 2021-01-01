@@ -1,4 +1,23 @@
 .MonthsContainer {
+}
+
+.content {
+  margin-top: 5%;
   display: flex;
   flex-wrap: wrap;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .content {
+    animation: Month-container-move 2s alternate;
+  }
+}
+
+@keyframes Month-container-move {
+  from {
+    transform: translate(0, 20%);
+  }
+  to {
+    transform: translate(0, 0%);
+  }
 }

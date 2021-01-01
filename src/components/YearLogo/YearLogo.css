@@ -1,3 +1,17 @@
 .YearLogo {
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .YearLogo {
+    animation: App-logo-spin 2s alternate;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: translate(0, -50%);
+  }
+  to {
+    transform: translate(0, 0%);
+  }
+}
