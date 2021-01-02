@@ -3,4 +3,15 @@
   flex: 1 0 21%;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.holder {
+  width: auto;
+  display: inline-block;
+}
+
+.holder img {
+  width: 110px;
+  height: auto;
 }
