@@ -1,0 +1,19 @@
+{
+  "2022":  {
+    "style": {
+      "background": "linear-gradient(266deg, rgba(255,253,255,1) 0%, rgba(215,255,253,1) 100%)"
+    },
+    "selectStyle": {
+      "background": "linear-gradient(266deg, rgba(255,147,76,1) 0%, rgba(251,104,111,1) 100%)",
+      "padding": "5px",
+      "borderRadius": "5px"
+    },
+    "spinnerMode": {
+      "animation": "grow",
+      "variant": "dark"
+    },
+    "hrStyle": {
+      "marginBottom": "30px"
+    }
+  }
+}

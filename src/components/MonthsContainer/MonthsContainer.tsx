@@ -44,7 +44,7 @@ const MonthsContainer = ({ year }: MonthsContainerProps) => {
 
   return (
     <div className="MonthsContainer" data-testid="MonthsContainer">
-      <Loader loading={loading}/>
+      <Loader loading={loading} year={year}/>
       { content }
     </div>
   );

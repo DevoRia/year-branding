@@ -31,7 +31,7 @@ const YearLogo = ({year}: YearLogoProps) => {
 
   return (
     <div className="YearLogo" data-testid="YearLogo">
-      <Loader loading={loading}/>
+      <Loader loading={loading} year={year} />
       {image}
     </div>
   );
