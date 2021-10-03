@@ -5,7 +5,7 @@ export function getCurrentYear() {
 
 export function getListOfYears() {
   let firstYear = 2016;
-  const currentYear = getCurrentYear();
+  const currentYear = getCurrentYear() + 1;
   const list: string[] = [firstYear.toString()];
 
   do {
