@@ -15,10 +15,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@main
-      - name: Node 12
+      - name: Node 16
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 16
       - name: npm install and npm run build
         run: |
           npm i
