@@ -47,7 +47,7 @@ const MonthsContainer = ({ year }: MonthsContainerProps) => {
           setMonthLogos(monthLogosTemp);
         });
     }
-  })
+  }, [])
 
   if (!loading) {
     content =

@@ -23,7 +23,7 @@ const YearLogo = ({year}: YearLogoProps) => {
           setLoading(false);
         })
     }
-  });
+  }, []);
 
   if (!loading) {
     image = <img className="image" width="200px" src={url} alt="year"/>
