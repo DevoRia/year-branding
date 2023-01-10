@@ -26,9 +26,23 @@ const MonthsContainer = ({ year }: MonthsContainerProps) => {
         promises.push(getImageUrl(monthPath(year, monthsList[i])))
       }
 
-      Promise.all(promises)
-        .then(done => {
-          done.map((url, i) => monthLogosTemp.push(<MonthLogo key={i} imageUrl={url}/>));
+      const results: any[] = []
+
+      const reduce = promises.reduce((promise, next, i) => promise
+        .then((url?: string) => {
+          url && results.push({url, i})
+          return next
+        })
+        .catch(() => next))
+        .then((url?: string) => {
+          url && results.push({url, i: promises.length - 1})
+          return Promise.resolve()
+        })
+        .catch(() => Promise.resolve());
+
+      reduce
+        .then(() => {
+          results.map(({url, i}) => monthLogosTemp.push(<MonthLogo key={i} imageUrl={url}/>));
           setLoading(false);
           setMonthLogos(monthLogosTemp);
         });
