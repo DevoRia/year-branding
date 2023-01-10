@@ -1,0 +1,35 @@
+
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@main
+      - name: Node 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: npm install and npm run build
+        run: |
+          npm i
+          npm run build
+      - name: Download artifact
+        uses: actions/download-artifact@main
+        with:
+          path: build
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting:yearbranding
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

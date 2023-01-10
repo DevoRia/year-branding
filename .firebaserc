@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "yearbranding": {
+      "hosting": {
+        "app": [
+          "yearbranding"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "yearbranding"
+  }
+}
