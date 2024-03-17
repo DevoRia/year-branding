@@ -1,4 +1,18 @@
 {
+  "2025":  {
+    "style": {
+      "background": "white"
+    },
+    "selectStyle": {
+      "background": "linear-gradient(266deg, rgb(20 49 178) 0%, rgb(13 224 187) 100%)",
+      "padding": "5px",
+      "borderRadius": "5px"
+    },
+    "hrStyle": {
+      "background": "#1431b2",
+      "height": "2px"
+    }
+  },
   "2024":  {
     "style": {
       "background": "linear-gradient(266deg, rgb(0 0 0) 0%, rgb(85 44 26) 100%)"
